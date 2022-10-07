@@ -17,6 +17,9 @@ apply from: '../build.dependencies.gradle'
 
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
+    sourceSets{
+        main.java.srcDirs+='../../power-play/src'
+    }
 }
 
 dependencies {
