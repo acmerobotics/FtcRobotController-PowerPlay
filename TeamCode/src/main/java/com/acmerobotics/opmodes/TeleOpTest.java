@@ -14,8 +14,6 @@ public class TeleOpTest extends LinearOpMode {
         ConeCapture coneCapture = new ConeCapture(hardwareMap);
         waitForStart();
 
-        double loopNum = 0;
-
         while (opModeIsActive()) {
             boolean captureServo = gamepad1.x;
             boolean releaseServo = gamepad1.y;
@@ -28,10 +26,8 @@ public class TeleOpTest extends LinearOpMode {
                 coneCapture.moveToRelease();
             }
 
-            loopNum++;
             telemetry.addData("x pressed",captureServo);
             telemetry.addData("y pressed",releaseServo);
-            telemetry.addData("Number of loops", loopNum);
             telemetry.update();
         }
     }
